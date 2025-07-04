@@ -1,191 +1,359 @@
- <!-----META SECTION----->
- <!DOCTYPE html>
- <html>
- <head>
- <title>om mahajan portfolio</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="./omportfolio2.css">
- </head>
- <body>
-    <!-----MENU SECTION------>
-<div class="main-panel">
-    <div class="container">
-      <div class="width-33 logo">Port <span class="span-col">Folio</span>
-      </div>
-      <div class="width-66">
-        <nav>
-          <a href="#">
-            <span class="span-col"></span>
-          </a>
-          <a href="#About">About me</a>
-          <a href="#Project">Project</a>
-          <a href="#Education">Education</a>
-          
-        </nav>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Mahajan Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 2;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;    
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: #1a0000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(255, 0, 0, 0.4);
+    }
+
+    .logo {
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #ff2e2e;
+    }
+
+    nav a {
+      margin-left: 25px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff2e2e;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 40px;
+      background: linear-gradient(135deg, #1a0000, #330000);
+    }
+
+    .hero img {
+      width: 32%;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      transition: transform 0.6s ease;
+      transform-style: preserve-3d;
+    }
+
+    .hero img:hover {
+      transform: rotateY(180deg);
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 span {
+      color: #ff2e2e;
+    }
+
+    .hero-text h2 {
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .socials a {
+      margin-right: 25px;
+      font-size: 28px;
+      color: #fff;
+      border: 2px solid #ff2e2e;
+      border-radius: 50%;
+      padding: 25px;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+      background-color: #ff2e2e;
+      transform: scale(1.1);
+    }
+
+    .section {
+      padding: 60px 40px;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: px;
+      color: #ff2e2e;
+    }
+
+    .about, .education {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .project-card {
+      background-color: #330000;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .project-card img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .project-card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff2e2e;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .project-card button:hover {
+      background-color: #e00000;
+    }
+
+    footer {
+      background: #1a0000;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Port<span>Folio</span></div>
+    <nav>
+      <a href="#About">About</a>
+      <a href="#Project">Projects</a>
+      <a href="#Education">Education</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Om <span>Mahajan</span></h1>
+      <h2>I'm a passionate game designer in Pune at Zeal College.</h2>
+      <div class="socials">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/?lang=en-in"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/ommahajan"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/ommahajan943/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/omma943"><i class="fab fa-github"></i></a>
       </div>
     </div>
-    <!------MAIN BANNERR------>
-<div class="container ">
-    <div class="width-50">
-      <div class="banner-section">
-        <span class="span-col"></span>
-        <h1>Om  <span class="span-col">Mahajan</span>
-        </h1>
-        <h2>- I'm a passionate game designer in pune at zeal collage.</h2>
-        <a href="https://www.facebook.com/">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="https://x.com/?lang=en-in">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/ommahajan">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/ommahajan943/">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="https://github.com/omma943">
-          <i class="fa fa-github"></i>
-        </a>
+    <img src="./om .jpg" alt="Om Mahajan">
+  </section>
+
+  <section class="section" id="About">
+    <h2>About Me</h2>
+    <div class="about">
+      <p>Hi, I am Om Mahajan, from Pune. I am a computer science student. Welcome to my Portfolio.</p>
+      <table>
+        <tr><th>Name:</th><td>Om Mahajan</td></tr>
+        <tr><th>Email:</th><td>ommahajan943@gmail.com</td></tr>
+        <tr><th>Birthday:</th><td>26 Jan, 2006</td></tr>
+        <tr><th>Study:</th><td>Zeal College</td></tr>
+        <tr><th>Phone:</th><td>77981 11173</td></tr>
+        <tr><th>City:</th><td>Pune, Maharashtra</td></tr>
+        <tr><th>Website:</th><td>www.ommahajan.com</td></tr>
+      </table>
+    </div>
+  </section>
+
+ <section class="section" id="Project">
+  <h2>Projects</h2>
+  <div class="projects-container-vertical">
+    <div class="project-card">
+      <div class="project-inner">
+        <div class="project-front">
+          <img src="./ratan tata.webp" alt="Ratan Tata">
+        </div>
+        <div class="project-back">
+          <div>
+            <h3>Project 1 - Ratan Tata</h3>
+            <p>Short description of the project. Short story about Tata.</p>
+            <a href="lab one.html" target="_blank"><button>Click Here</button></a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="width-50">
-      <img src="./WhatsApp Image 2024-12-22 at 19.16.16_07f899df.jpg">
+
+    <div class="project-card">
+      <div class="project-inner">
+        <div class="project-front">
+          <img src="./ratan_tata_banner.jpg" alt="Ratan Tata">
+        </div>
+        <div class="project-back">
+          <div>
+            <h3>Project 2 - Ratan Tata</h3>
+            <p>Short description of the project. Short story about Tata.</p>
+            <a href="lab one.html" target="_blank"><button>Click Here</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-inner">
+        <div class="project-front">
+          <img src="./download tata 2.jpg" alt="Ratan Tata">
+        </div>
+        <div class="project-back">
+          <div>
+            <h3>Project 3 - Ratan Tata</h3>
+            <p>Short description of the project. Short story about Tata.</p>
+            <a href="lab one.html" target="_blank"><button>Click Here</button></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-  <!------ABOUT US SECTION------>
-   
-<div class="main-section bg-lightgrey"  id="About" >
-    
-    <div class="container" align="center" >
-      
-      <div class="width-50" align="center">
-        <div class="about-us">
-          <h2 class="heading-text">About Us</h2>
-          <h3></h3>
-          <p>Hi, I am Om Mahajan, From Pune. i am computer science student. Welcome To The my Portfolio.</p>
-          <div class="width-50 mt-20">
-            <table cellspacing="8" cellpadding="8">
-              <tr>
-                <th>Name:</th>
-                <td>Om mahajan</td>
-              </tr>
-              <tr>
-                <th>Email:</th>
-                <td> ommahajan943@gmail.com</td>
-              </tr>
-              <tr>
-                <th>Birthday:</th>
-                <td> 26 jan, 2006</td>
-              </tr>
-              <tr>
-                <th>Study:</th>
-                <td> Zeal collage</td>
-              </tr>
-            </table>
-          </div>
-          <div class="width-50 mt-20">
-            <table cellspacing="8" cellpadding="8">
-              <tr>
-                <th>Phone:</th>
-                <td>77981 11173</td>
-              </tr>
-              <tr>
-                <th>City:</th>
-                <td>Pune, Maharashtra</td>
-              </tr>
-              
-              <tr>
-                <th>Website:</th>
-                <td> www.ommahajan.com</td>
-              </tr>
-               
-              
-              
-            </table>
-          </div>
-        </div>
+</section>
+
+<style>
+  .projects-container-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+</style>
+
+
+  <section class="section" id="Education">
+  <h2>Education</h2>
+  <div class="education-grid">
+    <div class="edu-card">
+      <img src="./balkavi.jpg" alt="SDK School">
+      <div class="edu-info">
+        <h3>S D Kude School (2012–2022)</h3>
+        <p>1st to 10th</p>
       </div>
     </div>
+    <div class="edu-card">
+      <img src="./ACS college.avif" alt="ACS College">
+      <div class="edu-info">
+        <h3>A C S College (2022–2024)</h3>
+        <p>11th to 12th Science</p>
+      </div>
+    </div>
+    <div class="edu-card">
+      <img src="./zeal collage.jpeg" alt="Zeal College">
+      <div class="edu-info">
+        <h3>Zeal College of Engineering (2024–2028)</h3>
+        <p>Bachelor in Computer Engineering</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </div> <BR><BR><BR></BR></BR></BR>
+<style>
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
 
-  <!------SKILL SECTION------>
-  <div class="container" align="center" >
-    
-    
-       
-            <div class="project-card" id="Project"  >
-                <h1>Project 1</h1>
-                <img src="./ratan tata.webp" alt="tata" style="height: 300px; width: 500px;" > <br>
-                <a href="lab one.html" target="_blank"><button>click here</button></a><br> 
-    
-                <div class="content">
-                    <h3>Sir ratan tata</h3>
-                    <p>Short description of the project. Short story about tata.</p>
-                </div>
-            </div> <br>
-            <section id="projects">
-       
-                <div class="project-card">
-                    <h1>Project 3</h1>
-                    <img src="./ratan_tata_banner.jpg" alt="tata" style="height: 300px; width: 500px;" > <br>
-                    <a href="lab one.html" target="_blank"><button>click here</button></a><br> 
-        
-                    <div class="content">
-                        <h3>Sir ratan tata</h3>
-                        
-                        <p>Short description of the project. Short story about tata.</p>
-                    </div>
-                </div> <br>
-                <section id="projects">
-       
-                    <div class="project-card">
-                        <h1>Project 3</h1>
-                        <img src="./download tata 2.jpg" alt="tata" style="height: 300px; width: 500px;" > <br> 
-                        <a href="lab one.html" target="_blank"><button>click here</button></a><br> 
-                        
-                        <div class="content">
-                            <h3>Sir ratan tata</h3>
-                            
-                            <p>Short description of the project. Short story about tata.</p>
-                        </div>
-                    </div> <br>
-            </div>
-            </div>
-        </div>
-    </section>
-</div>
-  <!------EXPERIENCE SECTION------>
-<div class="main-section bg-lightgrey" id="Education" >
-    <div class="container">
-      <div class="edu-exp">
-        <h2 class="heading-text">Education</h2>
-        <div class="experience-list">
-          <div class="experience-content">
-            <h1>S D Kude school</h1>
-            <h3>2012-2022</h3>
-            <p>1st to 10th </p><img src="./balkavi.jpg" alt="" style="height: 200px; width: 300px;border: solid 1px black  ">
-            
-          </div>
-        </div>
-        <div class="experience-list">
-          <div class="experience-content">
-            <h1>A C S collage </h1>
-            <h3>2022-2024</h3>
-            <p>11th to 12th science</p><img src="./ACS college.avif" alt="" style="height: 200px; width: 300px; border: solid 1px black ; "  >
-          </div>
-        </div>
-        <div class="experience-list">
-          <div class="experience-content">
-            <h1>Zeal collage of Engineering</h1>
-            <h3>2024-2028</h3>
-            <p>Bachelor in Computer Engineering</p><img src="./zeal collage.jpeg" alt="" style="height: 200px; width: 300px;border: solid 1px black  ">
-          </div>
-        </div>
-        
+  .edu-card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .edu-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .edu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .edu-info {
+    padding: 20px;
+    color: #fff;
+  }
+
+  .edu-info h3 {
+    margin-bottom: 10px;
+    color: #ff2e2e;
+  }
+
+  .edu-info p {
+    margin: 0;
+  }
+</style>
 
 
+  <footer>
+    &copy; 2025 Om Mahajan. All Rights Reserved.
+  </footer>
+</body>
+
+</html>
