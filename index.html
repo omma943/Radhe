@@ -208,21 +208,114 @@
     <img src="./om .jpg" alt="Om Mahajan">
   </section>
 
-  <section class="section" id="About">
-    <h2>About Me</h2>
-    <div class="about">
-      <p>Hi, I am Om Mahajan, from Pune. I am a computer science student. Welcome to my Portfolio.</p>
-      <table>
-        <tr><th>Name:</th><td>Om Mahajan</td></tr>
-        <tr><th>Email:</th><td>ommahajan943@gmail.com</td></tr>
-        <tr><th>Birthday:</th><td>26 Jan, 2006</td></tr>
-        <tr><th>Study:</th><td>Zeal College</td></tr>
-        <tr><th>Phone:</th><td>77981 11173</td></tr>
-        <tr><th>City:</th><td>Pune, Maharashtra</td></tr>
-        <tr><th>Website:</th><td>www.ommahajan.com</td></tr>
-      </table>
-    </div>
-  </section>
+ <style>
+  /* Basic Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  #About {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  #About h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #fff;
+  }
+
+  .about {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 1.2s ease forwards;
+  }
+
+  .about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ddd;
+  }
+
+  .about table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .about th,
+  .about td {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #f1f1f1;
+  }
+
+  .about th {
+    width: 30%;
+    color: #00d9ff;
+  }
+
+  .about tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+  }
+
+  .about tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .about th,
+    .about td {
+      display: block;
+      width: 100%;
+    }
+    .about tr {
+      margin-bottom: 15px;
+      display: block;
+    }
+  }
+</style>
+
+<section class="section" id="About">
+  <h2>About Me</h2>
+  <div class="about">
+    <p>Hi, I am Om Mahajan, from Pune. I am a computer science student. Welcome to my Portfolio.</p>
+    <table>
+      <tr><th>Name:</th><td>Om Mahajan</td></tr>
+      <tr><th>Email:</th><td>ommahajan943@gmail.com</td></tr>
+      <tr><th>Birthday:</th><td>26 Jan, 2006</td></tr>
+      <tr><th>Study:</th><td>Zeal College</td></tr>
+      <tr><th>Phone:</th><td>77981 11173</td></tr>
+      <tr><th>City:</th><td>Pune, Maharashtra</td></tr>
+      <tr><th>Website:</th><td>www.ommahajan.com</td></tr>
+    </table>
+  </div>
+</section>
+
 
  <section class="section" id="Project">
   <h2>Projects</h2>
