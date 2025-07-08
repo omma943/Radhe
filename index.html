@@ -412,17 +412,17 @@
 
  <section class="section" id="Project">
   <h2>Projects</h2>
-  <div class="projects-container-vertical">
+  <div class="projects-container-horizontal">
     <div class="project-card">
       <div class="project-inner">
         <div class="project-front">
-          <img src="./ratan tata.webp" alt="Ratan Tata">
+          <img src="./flappy-bird-.webp" alt="Flappy bird game">
         </div>
         <div class="project-back">
           <div>
-            <h3>Project 1 - Ratan Tata</h3>
+            <h3>Project 1 - Flappy bird game</h3>
             <p>Short description of the project. Short story about Tata.</p>
-            <a href="lab one.html" target="_blank"><button>Click Here</button></a>
+            <a href="./flappy.cpp" target="_blank"><button>Click Here</button></a>
           </div>
         </div>
       </div>
@@ -431,13 +431,13 @@
     <div class="project-card">
       <div class="project-inner">
         <div class="project-front">
-          <img src="./ratan_tata_banner.jpg" alt="Ratan Tata">
+          <img src="jarvispi.webp" alt="Ratan Tata">
         </div>
         <div class="project-back">
           <div>
-            <h3>Project 2 - Ratan Tata</h3>
+            <h3>Project 2 - AI slave</h3>
             <p>Short description of the project. Short story about Tata.</p>
-            <a href="lab one.html" target="_blank"><button>Click Here</button></a>
+            <a href="./om.py" target="_blank"><button>Click Here</button></a>
           </div>
         </div>
       </div>
@@ -461,12 +461,73 @@
 </section>
 
 <style>
-  .projects-container-vertical {
+  .projects-container-horizontal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .project-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+
+  .project-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .project-card:hover .project-inner {
+    transform: rotateY(180deg);
+  }
+
+  .project-front,
+  .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .project-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-back {
+    background-color: #f8f8f8;
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .project-back button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .project-back button:hover {
+    background-color: #0056b3;
   }
 </style>
+
 
 
   <section class="section" id="Education">
